@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+        <head>
+            <meta charset="utf-8"> <!--Codificacion occidental, caracteres español-->
+            <title>Formulario</title>
+
+             <!--Hoja de estilos-->
+
+            <link rel="stylesheet" type="text/css" href="assets/CSS/styles.css"/>
+
+
+        </head>
+
+    <body>
+      
+ 
+
+        <header id="header"> <!--Representa la cabecera del sitio web-->
+            <div class="center"> <!--Se le agrega la clase para posteriormente modificarlo-->
+            <!--LOGO-->
+                <div id="logo">
+                    <a href="index.html"><img src="assets/images/react.png" class="app-logo" alt="Logotipo"/></a>
+                
+
+                <span id="brand">
+
+                    <strong>Curso</strong>React 
+
+                </span> <!--El span es una etiqueta generica-->
+                </div>
+            <!--Menu-->
+
+            <nav id="menu"> <!--Representa la parte de la navegacion, logo-->
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="form.html">Formulario</a></li>
+                    <li><a href="#">Página 1</a></li>
+                    <li><a href="#">Página 2</a></li>
+
+                </ul>
+            </nav>
+
+            <!--Limpiar flotados-->
+            <div class="clearfix"></div>
+            
+        </div>
+
+        </header>
+        </div>
+        <div class="center"> <!--Se agrega class center para que considere el CSS el centrado-->
+
+            <!--El contenido de la pagina-->
+            <section id="content">
+
+                <h1 class="subheader">Formulario</h1>
+
+                    <form class="mid-form">
+                        <div class="form-group"> <!--En boost sirve para crear en bloque el formulario-->
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre"/>
+
+
+                        </div>
+
+                        <div class="form-group"> <!--En boost sirve para crear en bloque el formulario-->
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" name="apellidos"/>
+
+
+                        </div>
+
+                        <div class="form-group"> <!--En boost sirve para crear en bloque el formulario-->
+                            <label for="bio">Biografía</label>
+                            <textarea name="bio"></textarea> <!--Tipo texto-->
+
+
+                        </div>
+
+                        <div class="form-group radiobuttons"> <!--En boost sirve para crear en bloque el formulario-->
+                           <input type="radio" name="genero" value="hombre"/> Hombre
+                           <input type="radio" name="genero" value="mujer"/> Mujer 
+                           <input type="radio" name="genero" value="otro"/> Otro
+
+
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <input type="submit" value="Enviar" class="btn btn-success"/>
+
+                    </form>
+              
+            </section>
+
+            <aside id="sidebar"> <!--Esta etiqueta se usa para las barras laterales-->
+                <div id="nav-blog" class="sidebar-item"> <!--Poder navegar por el blog, Bloque del sidebar-->
+                    <h3>Puedes hacer esto</h3>
+                    <a href="#" class="btn btn-success">Crear articulo</a>
+                </div>
+
+                <div id="search" class="sidebar-item">
+                    <form>
+                        <h3>Buscador</h3>
+                    <p>Encuentra el artículo que buscas</p>
+
+                        <input type="text" name="search" />
+                        <input type="submit" name="submit" value="Buscar" class="btn" />
+                    </form>
+
+                    
+
+                </div>
+
+
+            </aside>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <!--Pie de pagina-->
+        <footer id="footer">
+            <div class="center">
+
+                <!--&copy es para el signo de copyright-->
+                <p>
+                    &copy; Toda la pagina web esta reservada
+                </p>
+            </div> 
+
+        </footer>
+
+    </body>
+
+</html>

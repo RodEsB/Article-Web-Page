@@ -1,0 +1,480 @@
+body {   /*Existen tres tipos body, id y .class*/
+    
+    text-align: center; /*Alinea todo*/
+    margin: 0px; /*Margen*/
+    padding: 0px; /*Relleno*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased; /*Suavizar el texto*/
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+/*Se usa almoadilla para seleccionarlo*/
+#header { 
+    
+    height: 120px; /*Altura*/
+    width: 100%;    /*Anchura*/
+    background: white; /*Color*/
+    border-bottom: 1px solid #ccc; /*Borde por abajo del elemento*/
+    border-top: 5px solid #61dafb; /*Borde por arriba del elemento*/
+
+}
+
+.center{
+    width: 75%;
+    margin: 0px auto; /*Centra un elemento automaticamente*/
+
+}
+
+.clearfix{ /*Evitar que suban otros elementos*/
+    clear: both;
+    float: none;
+}
+
+#logo {
+    width: 30%;
+    font-size: 30px; /*Tamaño de fuente*/
+    float: left; /*Mover el elemento*/
+    margin-top: 40px; /*Acomoda el logo*/
+}
+
+#logo img{
+    display: block; /*Hacer que el elemento se comporte como un bloque*/
+    float: left;
+    height: 50px;
+    margin-top: -3px;
+    margin-right: 5px;
+    /*Animacion*/
+    animation: girar infinite 30s linear;/*Nosotros agregamos el nombre, decidimos que sea infinita, duracion 30 seg y que siempre tendrá la misma velocidad*/
+
+
+}
+
+@keyframes girar { /*Crear una animacion*/
+    
+    from{ /*Keyframe que significa donde avanza la animacion hasta donde termina*/
+        transform:rotate(0deg) ;/*Permite manipular un elemento sin que afecte a otros*/
+    }
+    to{
+        transform:rotate(360deg) ;
+    }
+    /*10% {
+        height: 100px;
+    }
+    100% {
+        height: 200px;
+    }*/
+
+}
+
+#brand {
+    display: block;
+    margin: 0px;
+    float: left;
+}
+
+#menu {
+    width: 70%;
+    float: right;
+    font-size: 19px;
+
+}
+
+#menu ul{ /*Elemento ul que hay dentro*/
+    line-height: 85px; /*Altura de la linea */
+    width: 60%;
+    float: right;
+}
+
+#menu ul li{ /*Elementos li que hay dentro de ul y que hay dentro de menu*/
+    display: inline-block; /*Pone todos los elementos de una lista a lado*/
+    list-style: none; /*Elimina el estilo de puntos*/
+    height: 46px;
+    margin-left: 1px;
+    margin-right: 14px;
+
+    
+}
+
+#menu a{ /*Enlaces*/
+    text-decoration: none;
+    color: #444;
+    transition: 300ms all; 
+}
+
+#menu a:hover{ /*Al pasar el mouse por el texto*/
+
+    color: #3cb2d3;
+}
+
+#slider{
+    /*Degradado*/
+    background: rgb(13,162,204);
+    background: linear-gradient(90deg, rgba(13,162,204,1) 0%, rgba(28,123,254,1) 0%, rgba(0,212,255,1) 100%);
+    width: 100%;
+    height: 350px;
+    /*line-height: 350px;*/
+    color: white;
+    text-shadow: 0px 0px 5px #444;
+}
+
+#slider h1{
+    margin-top: 0.2px;
+    padding: 0px;
+    padding-top: 130px;
+    text-align: center;
+}
+
+.btn-white{
+    display: block;
+    color: rgb(88, 88, 88);
+    background: white;
+    padding: 10px;
+    width: 100px;
+    height: 35px;
+    margin: 0px auto;
+    font-size: 18px;
+    text-transform: uppercase; /*Convierte el texto en mayusculas*/
+    text-shadow: none;
+    text-decoration: none;
+    line-height: 35px; /*centrar el texto*/
+    box-shadow: 0px 0px 5px rgb(88, 88, 88); /*Difuminado*/
+    margin-top: 40px;
+    border-radius: 4px; /*Redondear los bordes*/
+    transition: 1000ms all;
+    
+}
+
+.btn-white:hover{
+    background-color: #444;
+    color: white;
+}
+
+#slider.slider-small{ /*Le da prioridad*/
+    height: 150px;
+
+}
+
+#slider.slider-small h1{
+    margin-top: 0.2px;
+    padding: 0px;
+    padding-top: 53px;
+    text-align: center;
+}
+
+#content {
+    width: 70%;
+    float: left;
+    min-height: 650px;/*Altura minima*/;
+    margin-right: 20px;
+}
+
+#sidebar{
+    width: 25%;
+    float: left;
+   
+}
+
+.sidebar-item{
+    background: #f7f7f7;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+.sidebar-item h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #eee;
+}
+
+.sidebar-item .btn{
+    margin: 0px auto;
+    margin-top: 10px;
+
+}
+
+.btn{
+    display: block;
+    background: white;
+    color: black;
+    padding: 15px;
+    font-weight: bold; /*Poner en negritas*/
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    max-width: 140px;
+    transition: 1000ms all;
+    border: none;
+    cursor: pointer; /*Al acercar el cursor cambia a puntero el mouse*/
+    border-radius: 5px;
+}
+
+.btn-success{
+    background: rgb(255, 255, 255);
+}
+
+.btn-success:hover{
+    background: rgb(120, 120, 120);
+    color: white;
+}
+
+.btn:hover{
+    background: rgb(120, 120, 120);
+    color: white;
+}
+
+/*Selector de artibuto*/
+
+.mid-form{
+    width: 50%; /*Hace el formulario más pequeño*/
+    margin: 0px auto; /*Centrar todo el contenido*/
+
+}
+
+.mid-form label{
+    display: block;
+    float: left;
+    text-align: left;
+    margin-top: 10px; /*Separa el campo de uno a otro*/
+    margin-bottom: 5px; 
+    font-size: 17px;
+    
+}
+
+input[type="text"],
+textarea{ /*Se reutiliza el estilo para textarea*/
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin-bottom: 5px;
+    transition: 300ms all;
+
+}
+
+input[type="text"]:focus,
+textarea:focus{/*Sirve para un sombrado interno*/
+    box-shadow: 0px 0px 5px #ccc inset;
+}
+
+/*Reglas de CSS*/
+
+textarea{
+    width: 100%;
+    height: 150px;
+    min-width: 100%;
+    max-width: 100%; /*Maximo de tamaño del texto*/
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.radiobuttons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+
+#footer{
+    background: #f7f7f7;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    color: #444;
+}
+
+#footer p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.article-item{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+
+}
+
+/*Tamaño de la caja donde se mantendra la imagen*/
+
+.article-item .image-wrap{
+    width: 130px;
+    height: 130px;
+    overflow: hidden; /*Oculta todo lo que no cumple con la medida*/
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+
+}
+
+/*Estilizar la imagen al tamaño de la caja*/
+.article-item .image-wrap img{ 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.article-item h2{
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 7px;
+}
+
+.article-item .date{
+    display: block;
+    width: 100%;
+    color: rgb(122, 122, 122);
+}
+
+.article-item a{
+    display: block;
+    color: rgb(1, 80, 191);
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 300ms all;
+}
+
+.article-item a:hover{
+    color: #444;
+    text-decoration: underline;
+}
+
+.subheader{
+    font-size: 38px;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+
+.article-detail .image-wrap{
+    float: none;
+    width: 100%;
+    height: 300px;
+
+}
+
+.article-detail .image-wrap img{
+    width: 100%;
+    height: auto;
+
+}
+
+.article-detail .subheader{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border: none;
+
+}
+
+/*Resposive WEB Design*/
+
+/*Desde la anchura 0px hasta la antura 1488px de pantalla*/
+@media (max-width: 1488px){
+    /*Se ejecuta lo siguiente*/
+
+    .center{
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 1314px){
+    /*Se ejecuta lo siguiente*/
+
+    .center{
+        width: 95%;
+    }
+
+    #menu ul{
+        width: auto;
+    }
+}
+
+@media (max-width: 797px){
+    
+    #logo{
+        float: none;
+        width: 240px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+    #menu, /*Selector multiple*/
+    #menu ul{
+        clear: both;   /*Para limpiar los posibles flotados*/ 
+        float: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        line-height: 43px;
+    }
+
+    #content{
+        float: none;
+        width: 100%;
+    }
+
+    #sidebar{
+        float: none;
+        width: 60%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+
+    }
+
+    #slider h1{
+        padding-top: 115px;
+        font-size: 25px;
+    }
+
+    .mid-form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 497px)
+{
+    #header{
+        min-height: 130px;
+        overflow: hidden;
+
+    }
+
+    #menu,
+    #menu ul{
+        line-height: 50px;
+    }
+
+    #menu ul li{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    #slider{
+        height: 180px;
+    }
+
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #slider .btn-white{
+        margin-top: 20px;
+    }
+
+    #slider .slider-small{
+        height: 100px;
+    }
+
+    #slider .slider-small h1{
+        padding-top: 35px;
+    }
+
+}

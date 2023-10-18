@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+        <head>
+            <meta charset="utf-8"> <!--Codificacion occidental, caracteres español-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Para que se configure al resposive-->
+            <title>Maquetación WEB</title>
+
+             <!--Hoja de estilos-->
+
+            <link rel="stylesheet" type="text/css" href="assets/CSS/styles.css"/>
+
+
+        </head>
+
+    <body>
+      
+       
+
+        <header id="header"> <!--Representa la cabecera del sitio web-->
+            <div class="center"> <!--Se le agrega la clase para posteriormente modificarlo-->
+            <!--LOGO-->
+                <div id="logo">
+                    <a href="index.html"><img src="assets/images/react.png" class="app-logo" alt="Logotipo"/></a>
+                
+
+                <span id="brand">
+
+                    <strong>Curso</strong>React 
+
+                </span> <!--El span es una etiqueta generica-->
+                </div>
+
+                    <!--Menu-->
+
+            <nav id="menu"> <!--Representa la parte de la navegacion, logo-->
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="form.html">Formulario</a></li>
+                    <li><a href="#">Página 1</a></li>
+                    <li><a href="#">Página 2</a></li>
+
+                </ul>
+            </nav>
+
+            <!--Limpiar flotados-->
+            <div class="clearfix"></div>
+            
+        </div>
+
+        </header>
+
+         <!--Creacion del Slider-->
+
+        <div id="slider" class="slider-big">
+            
+            <h1>Bienvenido a la página</h1>
+
+            <a href="blog.html" class="btn-white">Ir al blog</a>
+
+        </div>
+        <div class="center"> <!--Se agrega class center para que considere el CSS el centrado-->
+
+            <!--El contenido de la pagina-->
+            <section id="content">
+
+                <h2 class="subheader">Últimos artículos</h2>
+
+                <script>
+                    window.addEventListener("load", function(){ //Se ejecuta cuando toda la pagina está cargada
+    
+                    
+                    var i;
+                    var template = document.getElementById("article-template"); //Crear la variable que conecta al articulo    
+                    var articles = document.getElementById("articles");
+    
+                    for(i = 2; i <= 5; i++) //Bucle mientras sea menor o igual a 5 va a repertir la alerta
+                    {
+                        var clonar = template.cloneNode(true); //Clona el mismo valor
+                        clonar.removeAttribute("id"); //Elimina el atributo de id del bucle ya que solo debe exisitir uno
+
+                        var h2 = clonar.getElementsByTagName("h2")[0]; //Se usa la variable para cambiar el nombre del titulo
+                        h2.innerHTML = h2.textContent  + ' ' + i;   //Crea el espacio y especifica el numero de cada elemento
+
+                        articles.appendChild(clonar);
+                    }
+                });
+                    
+                    </script>
+
+                    
+                <!--Listado de los articulos-->
+
+                <div id="articles">
+
+                     <article class="article-item" id="article-template"> <!--Creacion de articulo-->
+                      <div class="image-wrap">
+
+                        <img src="assets/images/imagen.png" alt="periodico"/>
+                   
+                    </div>
+
+                    <h2>Artículo</h2>
+                    <span class="date">
+                        Hace 5 minutos
+                    </span>
+
+                    <a href="article.html">Leer más...</a>
+
+                    <div class="clearfix"></div>
+
+                    <!--Añadir articulos via JS-->
+
+
+                </article>
+                </div>
+            </section>
+
+            <aside id="sidebar"> <!--Esta etiqueta se usa para las barras laterales-->
+                <div id="nav-blog" class="sidebar-item"> <!--Poder navegar por el blog, Bloque del sidebar-->
+                    <h3>Puedes hacer esto</h3>
+                    <a href="#" class="btn btn-success">Crear articulo</a>
+                </div>
+
+                <div id="search" class="sidebar-item">
+                    <form>
+                        <h3>Buscador</h3>
+                    <p>Encuentra el artículo que buscas</p>
+
+                        <input type="text" name="search" />
+                        <input type="submit" name="submit" value="Buscar" class="btn" />
+                    </form>
+
+                    
+
+                </div>
+
+
+            </aside>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <!--Pie de pagina-->
+        <footer id="footer">
+            <div class="center">
+
+                <!--&copy es para el signo de copyright-->
+                <p>
+                    &copy; Toda la pagina web esta reservada
+                </p>
+            </div> 
+
+        </footer>
+
+    </body>
+
+</html>
